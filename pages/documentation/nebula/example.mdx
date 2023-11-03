@@ -1,0 +1,42 @@
+# Example
+
+This code demonstrates a basic implementation of Nebula within a React application, initializing CM360 floodlight management and triggering a floodlight event when the component is mounted. Developers can build upon this foundation to incorporate more advanced tracking and event management into their React applications with Nebula.
+
+```javascript
+import {useEffect} from 'react'
+import nebula from 'nebula'
+
+function App() {
+    useEffect(() => {
+        nebula.init('DC-6334513')
+        nebula.floodlight('mynme0', 'testu0', {u1: '[ref]'})
+        nebula.event('conversion', false)
+    }, [])
+    return (
+        <>
+            Test Application
+        </>
+    )
+}
+
+export default App;
+```
+
+Or inside your html application.
+
+```html
+<html>
+    <head>
+        <script src="https://nebula.placedv.com/nebula/latest/index.js" async type="text/javascript"></script>
+    </head>
+    <body>
+        <script>
+            nebula.init('DC-6334513')
+            nebula.floodlight('mynme0', 'testu0', {
+                u1: '[ref]'
+            })
+            nebula.event('conversion', false)
+        </script>
+    </body>
+</html>
+```

@@ -1,0 +1,38 @@
+# Basic usage
+
+Once installed, import the Goofls package into your React component or application.
+
+```javascript
+import { fls_global } from 'google-fls';
+```
+
+Goofls simplifies the integration of Floodlight Containers into your React app. Here's a step-by-step guide on how to use it:
+
+## Initializing the Floodlight container
+
+Before using Floodlight, initialize it with your configuration. You can do this in your application's entry point or within the component where you want to track events.
+
+```javascript
+import React, {useEffect} from 'react'
+import fls_global from 'google-fls' // import google-fls
+
+function App() {
+    useEffect(() => {
+        fls_global(true, // isCookiesFriendly true or false
+        {
+            format: 'global', // supported format: global, iframe and image
+            advertiser_id: 8384813 // Advertiser ID
+        }, {
+            type: 'test', // Type
+            cat: 'test' // Cat
+        })
+    }, [])
+    return (
+        <>
+            Test Application
+        </>
+    )
+}
+
+export default App;
+```
