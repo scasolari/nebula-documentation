@@ -13,7 +13,7 @@ export default {
     project: {
         link: 'https://github.com/placedv/nebula/pkgs/npm/nebula',
     },
-    docsRepositoryBase: 'https://github.com/placedv/nebula',
+    docsRepositoryBase: 'https://github.com/scasolari/nebula-documentation/tree/main',
     head: () => {
         const { frontMatter } = useConfig()
 
