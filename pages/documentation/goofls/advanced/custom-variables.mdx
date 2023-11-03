@@ -1,0 +1,39 @@
+---
+title: 'Goofls - Custom variables'
+---
+
+import {Callout} from "nextra/components";
+
+# Custom variables
+
+<Callout type="warning" emoji="⚠️">
+    Actually `custom variables` is available only for `iFrame` and `image` format. As Google describe you can add a max of 25 variables.
+</Callout>
+
+```jsx highlight=13,14
+import React, {useEffect} from 'react'
+import fls_global from 'google-fls'
+
+function App() {
+    useEffect(() => {
+        fls_global(cookies,{
+                format: 'image', // or iframe
+                advertiser_id: 8384813
+            }, {
+                type: 'test',
+                cat: 'test'
+            }, { // customVariables
+                u1: 'qwerty1',
+                u2: 'qwerty2'
+            }
+        })
+    }, [])
+    return (
+        <>
+            Test Application
+        </>
+    )
+}
+
+export default App;
+```
