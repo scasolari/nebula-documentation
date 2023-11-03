@@ -1,0 +1,48 @@
+---
+title: 'Goofls - Cookies Example'
+---
+
+# Cookies Example
+
+```jsx
+import React, {useEffect, useState} from 'react'
+import fls_global from 'google-fls'
+import styled from "styled-components";
+
+function App() {
+    const [cookies, setCookies] = useState(false)
+    const handleChange = () => {
+        setCookies(true)
+    }
+    useEffect(() => {
+        fls_global(cookies,{
+            format: 'global',
+            advertiser_id: 8384813
+        }, {
+            type: 'test',
+            cat: 'test'
+        })
+    }, [])
+    return (
+        <>
+            {cookies
+                ?  null
+                : <CookiesButton onClick={() => handleChange}>Accept Cookies</CookiesButton>
+            }
+        </>
+    )
+}
+
+export default App;
+
+const CookiesButton = styled.button`
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #5e656f;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+`;
+```
