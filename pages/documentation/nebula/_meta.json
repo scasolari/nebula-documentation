@@ -1,7 +1,8 @@
 {
-  "introduction": "Introduction",
   "installation": "Installation",
-  "basic-usage": "Basic usage",
-  "example": "Example",
+  "ga4": "Google Analytics 4",
+  "gtm": "Google Tag Manager",
+  "cm360": "Google CM 360",
+  "gads": "Google Ads",
   "versioning": "Versioning"
 }

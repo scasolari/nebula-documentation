@@ -1,0 +1,61 @@
+---
+title: Nebula - Google Campaign Manager 360
+---
+
+import { Callout } from 'nextra/components'
+
+# Google Campaign Manager 360
+
+### Initializing CM360
+
+<Callout type="info" emoji="ℹ️">
+    You can use the same configuration also for DV360.
+</Callout>
+
+To initialize the CM360 tag using Nebula, follow these steps:
+
+Import the `useNebula` module at the top of your `_app.js` file.
+
+```javascript
+import { useNebula } from '@placedv/nebula';
+```
+
+In the `useEffect` function of your `_app.js` file, use the `useNebula.init` function to initialize the CM360 tag with your gtag. Replace `'DC-XXXXXXXXXX'` with your actual gtag.
+
+```javascript
+useEffect(() => {
+  useNebula.init('DC-XXXXXXXXXX');
+}, []);
+```
+
+This code initializes the CM360 tag with the provided property ID, ensuring that it's ready to track user data.
+
+### Initializing CM360 Event Tag
+
+To initialize the CM360 event tag using Nebula, follow these steps:
+
+Use the `useNebula.event` function to set up the CM360 event tag with the required parameters. The following parameters are mandatory:
+
+| Value | Type | Required | Description |
+| :---          | :--- | :--- | :--- |
+| `type` | `string` | true | Group Tag String. |
+| `cat` | `string` | true | Activity Tag String. |
+| `allow_custom_scripts` | `boolean` | true | Anable or disble dynamic tags. |
+| `counting_method` | `string` | true | `standard`, `unique` and `per_session` |
+| `custom_variables` | `object` | false | Key-value pairs that can be used to track additional data about your users. |
+
+Additionally, you can provide custom variables within the `custom_variables` object to pass any specific data or values. For example, you can use the 'u1' variable to pass a reference value ('ref').
+
+```javascript
+useNebula.event({
+  type: 'mynme0',
+  cat: 'testu0',
+  allow_custom_scripts: true,
+  custom_variables: {
+    u1: 'ref'
+  },
+  counting_method: 'standard'
+});
+```
+
+By using this function with the specified parameters, you can effectively initialize the CM360 event tag within your application, allowing for tracking and customization based on your requirements.

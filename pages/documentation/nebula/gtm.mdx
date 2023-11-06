@@ -1,0 +1,25 @@
+---
+title: Nebula - Google Tag Manager
+---
+
+# Google Tag Manager
+
+### Initializing GTM
+
+To initialize the GTM tag using Nebula, follow these steps:
+
+Import the `useNebula` module at the top of your `_app.js` file.
+
+```javascript
+import { useNebula } from '@placedv/nebula';
+```
+
+In the `useEffect` function of your `_app.js` file, use the `useNebula.init` function to initialize the GTM tag with your gtag. Replace `'GTM-XXXXXXXXXX'` with your actual gtag.
+
+```javascript
+useEffect(() => {
+  useNebula.init('GTM-XXXXXXXXXX');
+}, []);
+```
+
+This code initializes the GTM tag with the provided property ID, ensuring that it's ready to track user data.

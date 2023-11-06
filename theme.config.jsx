@@ -33,7 +33,8 @@ export default {
         defaultTheme: 'dark'
     },
     sidebar: {
-        toggleButton: true
+        toggleButton: true,
+        defaultMenuCollapseLevel: 1
     },
     primaryHue: 240,
     primarySaturation: 30,

@@ -1,0 +1,42 @@
+---
+title: 'Nebula - GA4'
+---
+
+# Google Analytics 4
+
+### Initializing GA4
+
+To initialize the GA4 tag using Nebula, follow these steps:
+
+Import the `useNebula` module at the top of your `_app.js` file.
+
+```javascript
+import { useNebula } from '@placedv/nebula';
+```
+
+In the `useEffect` function of your `_app.js` file, use the `useNebula.init` function to initialize the GA4 tag with your Google Analytics property ID. Replace `'G-XXXXXXXXXX'` with your actual GA4 Measurement ID.
+
+```javascript
+useEffect(() => {
+  useNebula.init('G-XXXXXXXXXX');
+}, []);
+```
+
+This code initializes the GA4 tag with the provided property ID, ensuring that it's ready to track user data.
+
+### Custom Event
+
+To send a custom event to GA4 using Nebula, follow these steps:
+
+Use the `useNebula.event` function to trigger a custom event within your React components. The `event_name` parameter is mandatory and should be provided as an argument. Additionally, make sure to have already initialized the GA4 tag using the `useNebula.init` function as described above.
+
+```javascript
+useNebula.event({ event_name: 'test_event' });
+```
+
+| Value | Type | Required | Description |
+| :---          | :--- | :--- | :--- |
+| `gtag` | `string` | true | Your GA4 Measurement ID. |
+| `event_name` | `string` | true | Name of custom event. |
+
+This code sends a custom event with the name `test_event` to your initialized GA4 tag.

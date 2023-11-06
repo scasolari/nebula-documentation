@@ -205,6 +205,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@placedv/nebula@file:../nebula":
+  version "0.0.6"
+  resolved "file:../nebula"
+
 "@popperjs/core@^2.11.6":
   version "2.11.8"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
