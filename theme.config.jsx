@@ -1,5 +1,7 @@
 import { useConfig } from 'nextra-theme-docs'
 import {BsStars} from "react-icons/bs";
+import Link from "next/link";
+import {Footer} from "@/components/footer";
 
 export default {
     logo: <div style={{fontWeight: 700, display: 'flex', alignItems: 'center', gap: 10}}>
@@ -39,6 +41,6 @@ export default {
     primaryHue: 240,
     primarySaturation: 30,
     footer: {
-        text: <span>Nebula &copy; {new Date().getFullYear()}</span>,
+        component: Footer
     },
 }
