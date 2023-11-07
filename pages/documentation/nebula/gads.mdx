@@ -1,7 +1,29 @@
 ---
-title: Nebula - Google Ads
+title: 'Nebula - Google Ads'
 ---
 
 # Google Ads
 
-Coming soon
+### Initializing GADS
+
+To initialize the GADS tag using Nebula, follow these steps:
+
+Import the `useNebula` module at the top of your `_app.js` file.
+
+```javascript
+import { useNebula } from '@placedv/nebula';
+```
+
+In the `useEffect` function of your `_app.js` file, use the `useNebula.init` function to initialize the GADS tag with your conversion ID. Replace `'AW-XXXXXXXXXX'` with your actual GADS Conversion ID.
+
+```javascript
+useEffect(() => {
+  useNebula.init('AW-XXXXXXXXXX');
+}, []);
+```
+
+This code initializes the GADS tag with the provided conversion ID, ensuring that it's ready to track user data.
+
+### Custom Event
+
+We are working in order give you the full integration with Google Ads.
