@@ -2,9 +2,13 @@
 title: 'Nebula - Installation'
 ---
 
-import { Tabs } from 'nextra/components'
+import {Callout, Tabs} from 'nextra/components'
 
 # Installation
+
+<Callout emoji="👾">
+    Ensure that you have the `reactStrictMode` setting set to `false` in your Next.js configuration.
+</Callout>
 
 You can install Nebula using yarn, npm and pnpm.
 
@@ -26,14 +30,18 @@ You can install Nebula using yarn, npm and pnpm.
     </Tabs.Tab>
 </Tabs>
 
-Or import directly in your html
+Or import directly in your browser
 
 ```html
 <html>
     <head>
-        <script src="https://nebula.placedv.com/nebula/latest/index.js" async type="text/javascript"></script>
+        // ...
     </head>
     <body>
+        <script type="module">
+            import {useNebula} from "https://npm-nebula.s3.eu-central-1.amazonaws.com/0.0.1/index.js";
+            // ...
+        </script>
         // ...
     </body>
 </html>

@@ -4,11 +4,12 @@
     "type": "page",
     "display": "hidden",
     "theme": {
-      "layout": "raw"
+      "layout": "raw",
+      "footer": false
     }
   },
   "documentation": {
-    "title": "Documentation",
+    "title": "Docs",
     "type": "page"
   },
   "blog": {
